@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AboutUsActivity">
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        android:background="@color/blue">
+
+        <ImageView
+            android:id="@+id/NavLogo"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/logo11"
+            tools:ignore="ContentDescription" />
+
+        <TextView
+            android:id="@+id/HomeTextView"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="start|center"
+            android:text="Home"
+            android:onClick="home"
+            android:textColor="@color/white"
+            tools:ignore="HardcodedText" />
+
+        <TextView
+            android:id="@+id/shopTextView"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="start|center"
+            android:text="Shop"
+            android:onClick="shops"
+            android:textColor="@color/white"
+            tools:ignore="HardcodedText" />
+
+        <TextView
+            android:id="@+id/aboutTextView"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="start|center"
+            android:onClick="aboutUs"
+            android:text="Orders"
+            android:textColor="@color/white" />
+
+        <TextView
+            android:id="@+id/contactTextView"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="start|center"
+            android:text="Contact"
+            android:onClick="contactUs"
+            android:textColor="@color/white"
+            tools:ignore="HardcodedText" />
+
+        <ImageView
+            android:id="@+id/profileTextView"
+            android:layout_width="40dp"
+            android:layout_height="50dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:onClick="profile"
+            app:srcCompat="@drawable/baseline_account_box_24"
+            tools:ignore="ContentDescription,SpeakableTextPresentCheck" />
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@android:color/white"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout2"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginBottom="20dp"
+                android:text="Contact Us"
+                android:textColor="#333"
+                android:textSize="36sp" />
+
+            <!-- Contact Form -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="#fafafa"
+                android:padding="20dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    android:text="Send us a message"
+                    android:textColor="#444"
+                    android:textSize="24sp" />
+
+                <EditText
+                    android:id="@+id/name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="20dp"
+                    android:hint="Your Name"
+                    android:padding="10dp"
+                    tools:ignore="TouchTargetSizeCheck" />
+
+                <EditText
+                    android:id="@+id/email"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="20dp"
+                    android:hint="Your Email"
+                    android:inputType="textEmailAddress"
+                    android:padding="10dp"
+                    tools:ignore="TouchTargetSizeCheck" />
+
+                <EditText
+                    android:id="@+id/message"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="20dp"
+                    android:gravity="top"
+                    android:hint="Your Message"
+                    android:inputType="textMultiLine"
+                    android:minHeight="100dp"
+                    android:padding="10dp" />
+
+                <Button
+                    android:id="@+id/send_button"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="#5cb85c"
+                    android:padding="12dp"
+                    android:text="Send Message"
+                    android:textColor="@android:color/white" />
+            </LinearLayout>
+
+            <!-- Social Media Links -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#ffffff"
+                android:orientation="vertical"
+                android:padding="20dp"
+                android:layout_marginTop="20dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:text="Follow us on:"
+                    android:textColor="#444"
+                    android:textSize="24sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Facebook:"
+                        android:textSize="18sp" />
+
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_marginBottom="20dp"
+                        android:contentDescription="Facebook"
+                        android:scaleType="centerInside"
+                        android:src="@drawable/fbimg" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Twitter:"
+                        android:textSize="18sp" />
+
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_marginBottom="20dp"
+                        android:contentDescription="Twitter"
+                        android:scaleType="centerInside"
+                        android:src="@drawable/ximg" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Instagram:"
+                        android:textSize="18sp" />
+
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:contentDescription="Instagram"
+                        android:scaleType="centerInside"
+                        android:src="@drawable/igimg" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

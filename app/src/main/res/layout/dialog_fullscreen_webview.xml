@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="#f4f4f4">
+
+    <TextView
+        android:id="@+id/welcome_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Hey [User Name]"
+        android:textSize="24sp"
+        android:gravity="center"
+        android:padding="10dp"
+        android:background="#333"
+        android:textColor="#fff"/>
+
+    <TextView
+        android:id="@+id/income_report_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Income Report"
+        android:textSize="20sp"
+        android:textColor="#333"
+        android:layout_marginTop="20dp"/>
+
+    <LinearLayout
+        android:id="@+id/filter_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="10dp">
+
+        <Spinner
+            android:id="@+id/timeframe_spinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="48dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp">
+
+            <TextView
+                android:id="@+id/start_date_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Start Date:"
+                android:layout_gravity="center_vertical"/>
+
+            <EditText
+                android:id="@+id/start_date"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_weight="1"
+                android:hint="yyyy-mm-dd"
+                android:padding="8dp"
+                tools:ignore="TouchTargetSizeCheck" />
+
+            <TextView
+                android:id="@+id/end_date_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="End Date:"
+                android:layout_gravity="center_vertical"/>
+
+            <EditText
+                android:id="@+id/end_date"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_weight="1"
+                android:hint="yyyy-mm-dd"
+                android:padding="8dp"
+                tools:ignore="TouchTargetSizeCheck" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/filter_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Filter"
+            android:layout_marginTop="10dp"
+            android:padding="12dp"/>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/total_income"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Total Income: R0.00"
+        android:textSize="18sp"
+        android:textColor="#333"
+        android:layout_marginTop="20dp"/>
+
+    <TextView
+        android:id="@+id/order_details_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Order Details"
+        android:textSize="20sp"
+        android:textColor="#333"
+        android:layout_marginTop="20dp"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TableRow>
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:text="Order ID"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="2"
+                    android:text="Product Name"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:text="Product Size"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:text="Price"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:text="Quantity"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:text="Total"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="2"
+                    android:text="Order Date"
+                    android:textStyle="bold"/>
+            </TableRow>
+
+            <!-- Dynamic rows for order details go here -->
+
+        </TableLayout>
+    </ScrollView>
+
+    <Button
+        android:id="@+id/close_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Close"
+        android:layout_gravity="center"
+        android:padding="16dp"
+        android:layout_marginBottom="16dp"/>
+</LinearLayout>

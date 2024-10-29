@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="#f4f4f4"
+    tools:context=".adminManageUsers">
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Admin - Manage Users"
+        android:textSize="24sp"
+        android:layout_gravity="center"
+        android:textColor="#333"
+        android:padding="8dp"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TableLayout
+            android:id="@+id/tableLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:stretchColumns="0,1,2">
+
+            <TableRow
+                android:background="#ccc">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Name"
+                    android:textSize="18sp"
+                    android:padding="8dp"/>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Email"
+                    android:textSize="18sp"
+                    android:padding="8dp"/>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Calls"
+                    android:textSize="18sp"
+                    android:padding="8dp"/>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Action"
+                    android:textSize="18sp"
+                    android:padding="8dp"/>
+            </TableRow>
+
+            <!-- Dynamic rows will be added here programmatically -->
+
+        </TableLayout>
+    </ScrollView>
+</LinearLayout>

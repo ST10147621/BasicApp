@@ -1,0 +1,322 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:orientation="horizontal"
+        android:background="@color/blue"
+        tools:ignore="MissingConstraints">
+
+        <ImageView
+            android:id="@+id/NavLogo"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            app:srcCompat="@drawable/logo11"
+            tools:ignore="ContentDescription" />
+
+        <TextView
+            android:id="@+id/HomeTextView"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:onClick="home"
+            android:text="Home"
+            android:textColor="@color/white" />
+
+        <TextView
+            android:id="@+id/shopTextView"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:onClick="shops"
+            android:text="Shop"
+            android:textColor="@color/white" />
+
+        <TextView
+            android:id="@+id/aboutTextView"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:onClick="aboutUs"
+            android:text="Orders"
+            android:textColor="@color/white" />
+
+        <TextView
+            android:id="@+id/contactTextView"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:onClick="contactUs"
+            android:text="Contact"
+            android:textColor="@color/white" />
+
+        <ImageView
+            android:id="@+id/profileTextView"
+            android:layout_width="40dp"
+            android:layout_height="50dp"
+            android:onClick="profile"
+            app:srcCompat="@drawable/baseline_account_box_24"
+            tools:ignore="ContentDescription,SpeakableTextPresentCheck" />
+    </LinearLayout>
+
+    <!-- Scrollable Content Section -->
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout2"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <!-- Header Section -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="20dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="Shop All New Arrivals"
+                    android:textColor="@android:color/black"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_marginTop="10dp"
+                    android:src="@drawable/logo" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="16dp"
+                    android:text="Discover the ultimate shopping experience with our system, where quality meets convenience!"
+                    android:textAlignment="center"
+                    android:textSize="14sp" />
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:backgroundTint="#007bff"
+                    android:padding="10dp"
+                    android:text="Explore"
+                    android:textColor="@android:color/white" />
+            </LinearLayout>
+
+            <!-- Product Section -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="20dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="20dp"
+                    android:text="Everyday Skateboarding Apparel"
+                    android:textAlignment="center"
+                    android:textSize="24sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="20dp"
+                    android:text="Your One Stop OG Apparel Store"
+                    android:textAlignment="center" />
+            </LinearLayout>
+
+            <!-- Product Items -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="20dp">
+
+                <!-- Product 1 -->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="10dp"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:layout_width="210dp"
+                        android:layout_height="290dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/prod1" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="BASIC PATTERN TSHIRT"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="R250"
+                        android:textSize="16sp" />
+
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="@android:color/black"
+                        android:padding="10dp"
+                        android:text="Explore"
+                        android:textColor="@android:color/white" />
+                </LinearLayout>
+
+                <!-- Product 2 -->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="10dp"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:layout_width="210dp"
+                        android:layout_height="290dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/prod2" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="BLACK AND RED JACKET"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="R400"
+                        android:textSize="16sp" />
+
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="@android:color/black"
+                        android:padding="10dp"
+                        android:text="Explore"
+                        android:textColor="@android:color/white" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- Why Choose Us Section -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/darker_gray"
+                android:orientation="vertical"
+                android:padding="50dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="30dp"
+                    android:text="Why Choose Us"
+                    android:textAlignment="center"
+                    android:textSize="24sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="10dp">
+
+                    <!-- Feature 1 -->
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:gravity="center">
+
+                        <ImageView
+                            android:layout_width="70dp"
+                            android:layout_height="70dp"
+                            android:scaleType="centerInside"
+                            android:src="@drawable/prod2" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Fast Shipping"
+                            android:textAlignment="center"
+                            android:textSize="18sp" />
+                    </LinearLayout>
+
+                    <!-- Feature 2 -->
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:orientation="vertical"
+                        android:gravity="center">
+
+                        <ImageView
+                            android:layout_width="70dp"
+                            android:layout_height="70dp"
+                            android:scaleType="centerInside"
+                            android:src="@drawable/prod1" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Trusted Brand"
+                            android:textAlignment="center"
+                            android:textSize="18sp" />
+                    </LinearLayout>
+
+                    <!-- Feature 3 -->
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:orientation="vertical"
+                        android:gravity="center">
+
+                        <ImageView
+                            android:layout_width="70dp"
+                            android:layout_height="70dp"
+                            android:scaleType="centerInside"
+                            android:src="@drawable/prod6" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="24/7 Support"
+                            android:textAlignment="center"
+                            android:textSize="18sp" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

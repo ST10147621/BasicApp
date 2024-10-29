@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ProfileActivity"
+    tools:ignore="ExtraText">
+
+        <TextView
+            android:id="@+id/registrationTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="268dp"
+            android:text="Sign Up"
+            android:textColor="#151515"
+            android:textSize="34sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="MissingConstraints" />
+
+
+
+        <EditText
+            android:id="@+id/userEditTextReg"
+            android:layout_width="269dp"
+            android:layout_height="51dp"
+            android:layout_marginTop="24dp"
+            android:ems="10"
+            android:hint="Username"
+            android:inputType="text"
+            android:textColor="@color/black"
+            android:textColorHint="#757575"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/registrationTextView"
+            tools:ignore="Autofill,LabelFor,MissingConstraints,SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+        <EditText
+            android:id="@+id/emailEditText"
+            android:layout_width="269dp"
+            android:layout_height="51dp"
+            android:layout_marginTop="20dp"
+            android:ems="10"
+            android:hint="Email"
+            android:inputType="text"
+            android:textColor="@color/black"
+            android:textColorHint="#757575"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/userEditTextReg"
+            tools:ignore="Autofill,LabelFor,MissingConstraints,SpeakableTextPresentCheck,TextFields,TouchTargetSizeCheck" />
+
+        <EditText
+            android:id="@+id/phone"
+            android:layout_width="269dp"
+            android:layout_height="51dp"
+            android:layout_marginTop="20dp"
+            android:ems="10"
+            android:hint="phone number"
+            android:inputType="text"
+            android:textColor="@color/black"
+            android:textColorHint="#757575"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/emailEditText"
+            tools:ignore="Autofill,LabelFor,MissingConstraints,SpeakableTextPresentCheck,TextFields,TouchTargetSizeCheck" />
+
+        <EditText
+            android:id="@+id/retypePasswordEditText"
+            android:layout_width="269dp"
+            android:layout_height="51dp"
+            android:layout_marginTop="20dp"
+            android:ems="10"
+            android:hint="Password"
+            android:inputType="text"
+            android:textColor="@color/black"
+            android:textColorHint="#757575"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/phone"
+            tools:ignore="Autofill,LabelFor,MissingConstraints,SpeakableTextPresentCheck,TextFields,TouchTargetSizeCheck" />
+
+        <Button
+            android:id="@+id/btnCreate"
+            android:layout_width="267dp"
+            android:layout_height="45dp"
+            android:layout_marginTop="8dp"
+            android:background="@color/blue"
+            android:text="Create account"
+            android:textColor="#B0BEC5"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.479"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/retypePasswordEditText"
+            tools:ignore="MissingConstraints,TouchTargetSizeCheck" />
+
+        <TextView
+            android:id="@+id/alreadyUser"
+            android:layout_width="79dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:text="alreadyUser"
+            android:textColor="@color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btnCreate"
+            tools:ignore="MissingConstraints" />
+
+
+        <TextView
+            android:id="@+id/clickToNextPage"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="16dp"
+            android:onClick="ins"
+            android:text="login"
+            android:textColor="#00008B"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/alreadyUser"
+            app:layout_constraintTop_toBottomOf="@+id/btnCreate" />
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="245dp"
+            android:layout_height="218dp"
+            android:layout_marginTop="12dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/logo11" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+
